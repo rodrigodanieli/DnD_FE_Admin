@@ -61,7 +61,6 @@ export default defineComponent({
               Cookie.set(process.env.API_TOKEN_NAME, success.data)
             this.$router.push("/")
           }, err => {
-            console.log(123)
             this.loading = false
             this.$q.notify({
               colot: 'red-5',

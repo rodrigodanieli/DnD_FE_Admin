@@ -4,7 +4,16 @@ const routes = [
     path: '/',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      { path: '', component: () => import('pages/IndexPage.vue') },
+      {
+        path: 'rpgs',
+        component: () => import('pages/RPGs/ListRpg.vue'),
+        meta: {
+          menu: true,
+          icon: 'public',
+          label: 'RPGs'
+        }
+      }
     ]
   },
   {
